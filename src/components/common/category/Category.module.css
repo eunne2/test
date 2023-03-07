@@ -43,10 +43,12 @@
   font-size: 2.2rem;
   font-weight: 600;
   letter-spacing: -1px;
+  text-shadow: 2px 2px 2px #000;
 }
 
 .subText {
   margin: 0;
+  text-shadow: 2px 2px 2px #000;
 }
 
 .bookmark {
@@ -61,6 +63,7 @@
   position: absolute;
   left: 3px;
   top: 15px;
+  text-shadow: 2px 2px 2px #000;
 }
 
 @media (max-width: 390px) {
