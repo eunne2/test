@@ -102,3 +102,24 @@
   color: #fff;
   letter-spacing: -1px;
 }
+
+.btn1:hover,
+.btn2:hover,
+.btn3:hover,
+.btn4:hover,
+.btn5:hover,
+.btn6:hover {
+  cursor: pointer;
+}
+
+.btn1:active,
+.btn2:active,
+.btn5:active {
+  background-color: #f93636;
+  transition: 0.2s;
+}
+
+.btn6:active {
+  background-color: #014364;
+  transition: 0.2s;
+}

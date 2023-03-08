@@ -12,7 +12,9 @@ function Request() {
       <div className={styles.title}>
         순찰이 필요하다면 언제든지 삐용이에게 요청하세요!
       </div>
-      <Button selectBtn={1} text={"작성하기"} />
+      <span className={styles.btn}>
+        <Button selectBtn={1} text={"작성하기"} />
+      </span>
       <Posts />
     </div>
   );
