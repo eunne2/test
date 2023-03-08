@@ -4,7 +4,7 @@ import { faPen, faCheck } from "@fortawesome/free-solid-svg-icons";
 
 function Button({ text, selectBtn }) {
   return (
-    <div>
+    <>
       {/* 1. 글쓰기 */}
       {selectBtn == 1 && (
         <button className={styles.btn1}>
@@ -32,7 +32,7 @@ function Button({ text, selectBtn }) {
 
       {/* 6. 목록 && 검색 */}
       {selectBtn == 6 && <button className={styles.btn6}>{text}</button>}
-    </div>
+    </>
   );
 }
 
