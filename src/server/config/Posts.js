@@ -47,9 +47,11 @@ function Posts() {
               <p
                 style={{
                   margin: "0",
-                  padding: "10px",
+                  padding: "15px 10px",
                   width: "5%",
-                  textAlign: "center",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
                 }}
               >
                 {id}
@@ -57,9 +59,11 @@ function Posts() {
               <h3
                 style={{
                   margin: "0",
-                  padding: "10px",
+                  padding: "15px 10px",
                   width: "85%",
-                  textAlign: "start",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "flex-start",
                 }}
               >
                 {title}
@@ -67,9 +71,11 @@ function Posts() {
               <p
                 style={{
                   margin: "0",
-                  padding: "10px",
+                  padding: "15px 10px",
                   width: "10%",
-                  textAlign: "center",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
                 }}
               >
                 진행상태
