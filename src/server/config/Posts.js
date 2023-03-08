@@ -16,11 +16,7 @@ function Posts() {
   }, []);
 
   return (
-    <Layout>
-      <header>
-        <h1>게시물 목록</h1>
-      </header>
-
+    <div>
       {/* <label>
         페이지 당 표시할 게시물 수:&nbsp;
         <select
@@ -37,13 +33,51 @@ function Posts() {
       </label> */}
 
       <main>
-        {posts.slice(offset, offset + limit).map(({ id, title, body }) => (
-          <article key={id}>
-            <h3>
-              {id}. {title}
-            </h3>
-            <p>{body}</p>
-          </article>
+        {posts.slice(offset, offset + limit).map(({ id, title }) => (
+          <div>
+            <article
+              key={id}
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-between",
+                fontSize: "1.2rem",
+              }}
+            >
+              <p
+                style={{
+                  margin: "0",
+                  padding: "10px",
+                  width: "5%",
+                  textAlign: "center",
+                }}
+              >
+                {id}
+              </p>
+              <h3
+                style={{
+                  margin: "0",
+                  padding: "10px",
+                  width: "85%",
+                  textAlign: "start",
+                }}
+              >
+                {title}
+              </h3>
+              <p
+                style={{
+                  margin: "0",
+                  padding: "10px",
+                  width: "10%",
+                  textAlign: "center",
+                }}
+              >
+                진행상태
+              </p>
+              {/* <p>{body}</p> */}
+            </article>
+            <Hr />
+          </div>
         ))}
       </main>
 
@@ -55,16 +89,16 @@ function Posts() {
           setPage={setPage}
         />
       </footer>
-    </Layout>
+    </div>
   );
 }
 
-const Layout = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 800px;
-  margin: 0 auto;
+const Hr = styled.hr`
+  height: 0.8px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 0;
+  margin: auto;
 `;
 
 export default Posts;

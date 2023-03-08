@@ -1,8 +1,10 @@
 import styles from "./Request.module.css";
+import styled from "styled-components";
 import Category from "../../components/common/category/Category";
 import Button from "../../components/common/button/Button";
 import Posts from "../../server/config/Posts";
 import Nav from "../../components/common/nav/Nav";
+import Footer from "../../components/common/footer/Footer";
 
 function Request() {
   return (
@@ -15,9 +17,44 @@ function Request() {
       <span className={styles.btn}>
         <Button selectBtn={1} text={"작성하기"} />
       </span>
-      <Posts />
+      <MainBox>
+        <hr className={styles.hr} />
+        <PostsBox>
+          <header className={styles.header}>
+            <p className={styles.num}>번호</p>
+            <br />
+            <p className={styles.state}>진행상태</p>
+          </header>
+          <Hr />
+          <Posts />
+        </PostsBox>
+        <hr className={styles.hr} />
+      </MainBox>
+      <Footer />
     </div>
   );
 }
+
+const Hr = styled.hr`
+  height: 0.8px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 0;
+  margin: auto;
+`;
+
+const PostsBox = styled.div`
+  margin: auto;
+  width: calc(100% - 3%);
+  height: 100%;
+  box-shadow: 1px 1px 40px #909090;
+  letter-spacing: -0.5px;
+`;
+
+const MainBox = styled.div`
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 30px;
+`;
 
 export default Request;

@@ -4,7 +4,7 @@ function Pagination({ total, limit, page, setPage }) {
   const numPages = Math.ceil(total / limit);
   console.log(numPages);
   return (
-    <Nav>
+    <Div>
       <Button onClick={() => setPage(page - 1)} disabled={page === 1}>
         &lt;
       </Button>
@@ -20,16 +20,16 @@ function Pagination({ total, limit, page, setPage }) {
       <Button onClick={() => setPage(page + 1)} disabled={page === numPages}>
         &gt;
       </Button>
-    </Nav>
+    </Div>
   );
 }
 
-const Nav = styled.nav`
+const Div = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 4px;
-  margin: 16px;
+  padding: 16px;
 `;
 
 const Button = styled.button`
