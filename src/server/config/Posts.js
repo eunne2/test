@@ -41,7 +41,7 @@ function Posts() {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "space-between",
-                fontSize: "1.2rem",
+                fontSize: "1.25rem",
               }}
             >
               <p

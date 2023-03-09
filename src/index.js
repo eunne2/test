@@ -9,6 +9,6 @@ import Scroll from "./components/common/scroll/Scroll";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <RequestWrite />
+    <Home />
   </React.StrictMode>
 );

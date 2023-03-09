@@ -5,6 +5,7 @@ import Button from "../../components/common/button/Button";
 import Posts from "../../server/config/Posts";
 import Nav from "../../components/common/nav/Nav";
 import Footer from "../../components/common/footer/Footer";
+import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
 
 function Request() {
   return (
@@ -15,7 +16,13 @@ function Request() {
         순찰이 필요하다면 언제든지 삐용이에게 요청하세요!
       </div>
       <span className={styles.btn}>
-        <Button selectBtn={1} text={"작성하기"} />
+        <NavLink
+          className={({ isActive }) => "nav-link" + (isActive ? " click" : "")}
+          to="/request-write"
+          style={{ textDecoration: "none" }}
+        >
+          <Button selectBtn={1} text={"작성하기"} />
+        </NavLink>
       </span>
       <MainBox>
         <hr className={styles.hr} />
