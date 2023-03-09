@@ -1,15 +1,16 @@
 import Category from "../../components/common/category/Category";
 import Button from "../../components/common/button/Button";
 import Posts from "../../server/config/Posts";
-import Nav from "../../components/common/nav/Nav";
 import Footer from "../../components/common/footer/Footer";
 import styled from "styled-components";
 import styles from "./RequestWrite.module.css";
+import Header from "../../components/common/header/Header";
+import { NavLink } from "react-router-dom";
 
 function RequestWrite() {
   return (
     <div>
-      <Nav />
+      <Header />
       <Category category={"신고 / 순찰 요청"} text={"순찰요청"} />
       <div className={styles.title}>
         순찰을 원하는 장소와 이유를 적어주세요!
@@ -37,9 +38,27 @@ function RequestWrite() {
           </div>
         </PostsBox>
       </MainBox>
-      <span className={styles.btn}>
-        <Button selectBtn={2} text={"등록하기"} />
-      </span>
+      <div className={styles.btnBox}>
+        <span className={styles.btn2}>
+          <NavLink
+            className={({ isActive }) =>
+              "nav-link" + (isActive ? " click" : "")
+            }
+            to="/request"
+            style={{ textDecoration: "none" }}
+          >
+            <Button selectBtn={6} text={"목록"} />
+          </NavLink>
+        </span>
+        <span
+          onClick={() => {
+            alert("등록이 완료되었습니다.");
+          }}
+          className={styles.btn}
+        >
+          <Button selectBtn={2} text={"등록하기"} />
+        </span>
+      </div>
       <Footer />
     </div>
   );

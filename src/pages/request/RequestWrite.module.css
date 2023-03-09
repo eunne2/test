@@ -61,9 +61,17 @@
 }
 
 .btn {
-  padding-right: 30px;
+  margin-right: 50px;
+  margin-bottom: 35px;
+}
+
+.btn2 {
+  margin-left: 50px;
+  margin-bottom: 35px;
+}
+
+.btnBox {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  margin-bottom: 35px;
+  justify-content: space-between;
 }
