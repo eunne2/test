@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Pagination from "./Pagination";
 
@@ -66,7 +67,7 @@ function Posts() {
                   justifyContent: "flex-start",
                 }}
               >
-                {title}
+                <Link to={`/request-details/${id}`}>{title}</Link>
               </h3>
               <p
                 style={{

@@ -5,43 +5,57 @@ import Category from "../../components/common/category/Category";
 import styled from "styled-components";
 import styles from "./RequestDetails.module.css";
 import { NavLink } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 function RequestDetails() {
+  const [posts, setPosts] = useState([]);
+  useEffect(() => {
+    fetch("https://jsonplaceholder.typicode.com/posts")
+      .then((res) => res.json())
+      .then((data) => setPosts(data));
+  }, []);
+
   return (
     <div>
       <Header />
       <Category category={"신고 / 순찰 요청"} text={"순찰요청"} />
       <MainBox>
         <PostsBox>
-          <div
-            style={{ margin: "auto", width: "calc(100% - 1%)", height: "100%" }}
-          >
-            <div className={styles.box}>
-              <div className={styles.title}>
-                <div>제</div>
-                <div>목</div>
+          {posts.slice(0, 1).map(({ id, title, body }) => (
+            <div
+              style={{
+                margin: "auto",
+                width: "calc(100% - 1%)",
+                height: "100%",
+              }}
+            >
+              <div className={styles.box}>
+                <div className={styles.title}>
+                  <div>제</div>
+                  <div>목</div>
+                </div>
+                <div className={styles.content}>{title}</div>
               </div>
-              <div className={styles.content}>어쩌구</div>
-            </div>
-            <Hr />
-            <div className={styles.box}>
-              <div className={styles.title}>
-                <div>작</div>
-                <div>성</div>
-                <div>일</div>
-                <div>자</div>
+              <Hr />
+              <div className={styles.box}>
+                <div className={styles.title}>
+                  <div>작</div>
+                  <div>성</div>
+                  <div>일</div>
+                  <div>자</div>
+                </div>
+                <div className={styles.content}>{id}</div>
               </div>
-              <div className={styles.content}>저쩌구</div>
-            </div>
-            <Hr />
-            <div className={styles.box}>
-              <div className={styles.title2}>
-                <div>내</div>
-                <div>용</div>
+              <Hr />
+              <div className={styles.box}>
+                <div className={styles.title2}>
+                  <div>내</div>
+                  <div>용</div>
+                </div>
+                <div className={styles.content2}>{body}</div>
               </div>
-              <div className={styles.content2}>ㅛㅛ</div>
             </div>
-          </div>
+          ))}
         </PostsBox>
       </MainBox>
       <MainBox>

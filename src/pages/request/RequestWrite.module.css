@@ -58,6 +58,8 @@
 
 .contentInput {
   resize: none;
+  min-height: 425px;
+  padding-top: 10px;
 }
 
 .btn {

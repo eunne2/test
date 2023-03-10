@@ -78,7 +78,7 @@ const Hr = styled.hr`
 const PostsBox = styled.div`
   margin: auto;
   width: calc(100% - 3%);
-  height: 100%;
+  min-height: 600px;
   box-shadow: 1px 1px 40px #909090;
   letter-spacing: -0.5px;
   border: 1px solid rgba(0, 0, 0, 0.6);
@@ -89,7 +89,6 @@ const MainBox = styled.div`
   margin: auto;
   margin-top: 20px;
   margin-bottom: 30px;
-  height: 600px;
 `;
 
 export default RequestWrite;
