@@ -3,15 +3,11 @@ import styled from "styled-components";
 import Category from "../../components/common/category/Category";
 import Button from "../../components/common/button/Button";
 import Posts from "../../server/config/Posts";
-//import Nav from "../../components/common/nav/Nav";
-import Header from "../../components/common/header/Header";
-import Footer from "../../components/common/footer/Footer";
-import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function Request() {
   return (
     <div>
-      <Header />
       <Category category={"신고 / 순찰 요청"} text={"순찰요청"} />
       <div className={styles.title}>
         순찰이 필요하다면 언제든지 삐용이에게 요청하세요!
@@ -38,7 +34,6 @@ function Request() {
         </PostsBox>
         <hr className={styles.hr} />
       </MainBox>
-      <Footer />
     </div>
   );
 }

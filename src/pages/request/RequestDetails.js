@@ -1,5 +1,3 @@
-import Footer from "../../components/common/footer/Footer";
-import Header from "../../components/common/header/Header";
 import Button from "../../components/common/button/Button";
 import Category from "../../components/common/category/Category";
 import styled from "styled-components";
@@ -17,7 +15,6 @@ function RequestDetails() {
 
   return (
     <div>
-      <Header />
       <Category category={"신고 / 순찰 요청"} text={"순찰요청"} />
       <MainBox>
         <PostsBox>
@@ -92,7 +89,6 @@ function RequestDetails() {
           <Button selectBtn={6} text={"목록"} />
         </NavLink>
       </span>
-      <Footer />
     </div>
   );
 }
