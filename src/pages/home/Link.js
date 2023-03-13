@@ -6,6 +6,7 @@ import Home from "./Home";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "../../components/common/header/Header";
 import Footer from "../../components/common/footer/Footer";
+import CommunityWrite from "../community/CommunityWrite";
 
 function Link() {
   return (
@@ -18,6 +19,7 @@ function Link() {
           <Route path="/request-details" element={<RequestDetails />} />
           <Route path="/request-write" element={<RequestWrite />} />
           <Route path="/community" element={<Community />} />
+          <Route path="community-write" element={<CommunityWrite />} />
         </Routes>
       </BrowserRouter>
       <Footer />
